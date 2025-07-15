@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from "./components/Header";
+import TaskForm from "./components/TaskForm";
+import Task from "./components/Task";
+import "./index.css";
+import { useState } from "react";
+import quests from "./questLog.js";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [randomTask, setRandomTask] = useState("");
+
+ const [difficulty, setDifficulty] = useState("");
+  const [category, setCategory] = useState("");
+  const [time, setTime] = useState("");
+
+function getFilteredTask() {
+    const filtered = quests.filter((task) => {
+      return (
+        (difficulty === "" || task.difficulty === difficulty) &&
+        (category === "" || task.category === category) &&
+        (time === "" || task.time_consumption.toString() === time)
+      );
+    });
+
+    if (filtered.length === 0) {
+      setRandomTask({ task: "No matching task found!" });
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * filtered.length);
+    setRandomTask(filtered[randomIndex]);
+  }
+
+ 
+
+  function getRandomQuest(){
+    const randomIndex = Math.floor(Math.random() * quests.length);
+    setRandomTask(quests[randomIndex]);
+  }
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <TaskForm onClick={getRandomQuest} 
+       difficulty={difficulty}
+        setDifficulty={setDifficulty}
+        category={category}
+        setCategory={setCategory}
+        time={time}
+        setTime={setTime}
+        onFilteredClick={getFilteredTask} />
+      <Task randomTask={randomTask} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
