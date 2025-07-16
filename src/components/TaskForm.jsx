@@ -14,7 +14,7 @@ function TaskForm({ onClick,  difficulty,
     <>
       <form
         onSubmit={handleSubmit}
-        className="border-2 border-gray-300 p-10 rounded-lg flex flex-col gap-4 w-xl mx-auto my-10"
+        className="border-2 border-gray-300 p-2 mx-4 md:p-10 rounded-lg flex flex-col gap-4 md:w-xl md:mx-auto my-10"
       >
         <h2 className="text-2xl block mx-auto font-bold">Choose your task</h2>
         <fieldset className="flex justify-between">
@@ -65,7 +65,7 @@ function TaskForm({ onClick,  difficulty,
             <option value="5">5</option>
           </select>
         </fieldset>
-        <div className="buttons flex justify-around mt-4">
+        <div className="buttons flex flex-col gap-2 md:flex-row justify-around mt-4">
         <button type="button" className=" bg-purple-700 text-white font-bold rounded-sm px-4 py-2" onClick={onFilteredClick}>Generate task</button>
         <button type="button" className=" bg-purple-700 text-white font-bold rounded-sm px-4 py-2" onClick = {onClick}>Generate random task</button>
         </div>
