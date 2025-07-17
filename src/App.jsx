@@ -4,13 +4,14 @@ import Task from "./components/Task";
 import "./index.css";
 import { useState } from "react";
 import quests from "./questLog.js";
+import AllFittingTasks from "./components/AllFittingTasks.jsx";
 
 function App() {
   const [randomTask, setRandomTask] = useState("");
-
- const [difficulty, setDifficulty] = useState("");
+  const [difficulty, setDifficulty] = useState("");
   const [category, setCategory] = useState("");
   const [time, setTime] = useState("");
+  const [filteredTasks, setFilteredTasks] = useState([]);
 
 function getFilteredTask() {
     const filtered = quests.filter((task) => {
@@ -23,11 +24,13 @@ function getFilteredTask() {
 
     if (filtered.length === 0) {
       setRandomTask({ task: "No matching task found!" });
+      setFilteredTasks([]);
       return;
     }
 
     const randomIndex = Math.floor(Math.random() * filtered.length);
     setRandomTask(filtered[randomIndex]);
+    setFilteredTasks(filtered);
   }
 
  
@@ -50,6 +53,7 @@ function getFilteredTask() {
         setTime={setTime}
         onFilteredClick={getFilteredTask} />
       <Task randomTask={randomTask} />
+      <AllFittingTasks tasks={filteredTasks} />
     </>
   );
 }
