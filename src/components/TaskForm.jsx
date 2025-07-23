@@ -1,4 +1,4 @@
-function TaskForm({ onClick,  difficulty,
+function TaskForm({  difficulty,
   setDifficulty,
   category,
   setCategory,
@@ -24,10 +24,10 @@ function TaskForm({ onClick,  difficulty,
           onChange={(e) => setDifficulty(e.target.value)}
           className="min-w-0 py-1.5 pr-3 pl-1 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm">
             <option value="">Any</option>
-            <option value="Daily surviving">Daily surviving</option>
+            <option value="Daily Surviving">Daily surviving</option>
             <option value="Normal">Normal</option>
             <option value="Challenging">Challenging</option>
-            <option value="Extra challenging">Extra challenging</option>
+            <option value="Extra Challenging">Extra challenging</option>
           </select>
         </fieldset>
 
@@ -41,13 +41,12 @@ function TaskForm({ onClick,  difficulty,
             <option value="IT">IT</option>
             <option value="Chores">Chores</option>
             <option value="Dog">Dog</option>
-            <option value="Finance">Finance</option>
             <option value="Fitness">Fitness</option>
             <option value="Mental health">Mental Health</option>
             <option value="Other">Other</option>
             <option value="Relationships">Relationships</option>
             <option value="Self care">Self Care</option>
-            <option value="Self improvement">Self Improvement</option>
+      
           </select>
         </fieldset>
 
@@ -67,7 +66,6 @@ function TaskForm({ onClick,  difficulty,
         </fieldset>
         <div className="buttons flex flex-col gap-2 md:flex-row justify-around mt-4">
         <button type="button" className=" bg-purple-700 text-white font-bold rounded-sm px-4 py-2" onClick={onFilteredClick}>Generate task</button>
-        <button type="button" className=" bg-purple-700 text-white font-bold rounded-sm px-4 py-2" onClick = {onClick}>Generate random task</button>
         </div>
       </form>
     </>

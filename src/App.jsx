@@ -16,9 +16,10 @@ function App() {
 function getFilteredTask() {
     const filtered = quests.filter((task) => {
       return (
-        (difficulty === "" || task.difficulty === difficulty) &&
-        (category === "" || task.category === category) &&
-        (time === "" || task.time_consumption.toString() === time)
+        task.Status === false && 
+        (difficulty === "" || task.Difficulty === difficulty) &&
+        (category === "" || task.Category === category) &&
+        (time === "" || task.Time.toString() === time)
       );
     });
 
@@ -33,18 +34,11 @@ function getFilteredTask() {
     setFilteredTasks(filtered);
   }
 
- 
-
-  function getRandomQuest(){
-    const randomIndex = Math.floor(Math.random() * quests.length);
-    setRandomTask(quests[randomIndex]);
-  }
-
 
   return (
     <>
       <Header />
-      <TaskForm onClick={getRandomQuest} 
+      <TaskForm
        difficulty={difficulty}
         setDifficulty={setDifficulty}
         category={category}
