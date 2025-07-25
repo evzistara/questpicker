@@ -65,7 +65,7 @@ function TaskForm({  difficulty,
           </select>
         </fieldset>
         <div className="buttons flex flex-col gap-2 md:flex-row justify-around mt-4">
-        <button type="button" className=" bg-purple-700 text-white font-bold rounded-sm px-4 py-2" onClick={onFilteredClick}>Generate task</button>
+        <button type="button" className=" bg-purple-700 text-white font-bold rounded-sm px-4 py-2 hover:bg-purple-500" onClick={onFilteredClick}>Generate task</button>
         </div>
       </form>
     </>
