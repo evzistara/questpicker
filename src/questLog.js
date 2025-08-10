@@ -205,7 +205,7 @@ const quests = [
    "Category": "Chores",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 27,
@@ -557,7 +557,7 @@ const quests = [
    "Category": "Mental health",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 71,
@@ -837,7 +837,7 @@ const quests = [
    "Category": "IT",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 106,
@@ -845,7 +845,7 @@ const quests = [
    "Category": "Fitness",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 107,
@@ -853,7 +853,7 @@ const quests = [
    "Category": "IT",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 108,
@@ -949,7 +949,7 @@ const quests = [
    "Category": "Dog",
    "Time": 1,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 120,
@@ -1077,7 +1077,7 @@ const quests = [
    "Category": "Mental health",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 136,
@@ -1229,7 +1229,7 @@ const quests = [
    "Category": "Other",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 155,
@@ -1309,7 +1309,7 @@ const quests = [
    "Category": "Other",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 165,
@@ -1357,7 +1357,7 @@ const quests = [
    "Category": "Other",
    "Time": 3,
    "Difficulty": "Challenging",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 171,
@@ -1477,7 +1477,7 @@ const quests = [
    "Category": "Other",
    "Time": 2,
    "Difficulty": "Challenging",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 186,
@@ -1669,7 +1669,7 @@ const quests = [
    "Category": "Fitness",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 210,
@@ -1701,7 +1701,7 @@ const quests = [
    "Category": "IT",
    "Time": 3,
    "Difficulty": "Challenging",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 214,
@@ -1709,7 +1709,7 @@ const quests = [
    "Category": "Mental health",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 215,
@@ -2381,7 +2381,7 @@ const quests = [
    "Category": "Other",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 299,
@@ -2501,7 +2501,7 @@ const quests = [
    "Category": "IT",
    "Time": 2,
    "Difficulty": "Normal",
-   "Status": false,
+   "Status": true,
  },
  {
    "ID": 314,
